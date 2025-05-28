@@ -1,0 +1,19 @@
+# 顶层 EditorConfig 配置
+root = true
+
+# 所有文件通用规则
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Markdown 文件的例外（保留换行）
+[*.md]
+trim_trailing_whitespace = false
+
+# JSON 文件（可以保留默认设置）
+[*.json]
+indent_size = 2

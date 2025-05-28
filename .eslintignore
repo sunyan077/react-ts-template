@@ -1,0 +1,12 @@
+# 忽略构建产物
+dist/
+build/
+
+# 忽略依赖
+node_modules/
+
+# 忽略配置文件或其他你不想检查的文件
+*.config.js
+
+# 忽略特定目录
+public/

@@ -1,0 +1,9 @@
+# 忽略构建产物
+dist/
+build/
+
+# 忽略依赖
+node_modules/
+
+# 忽略生成文件
+*.min.js
