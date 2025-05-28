@@ -6,10 +6,31 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
+  const request = () => {
+    fetch('/api/user/info')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('用户信息：', data);
+      })
+      .catch(error => {
+        console.error('请求失败:', error);
+      });
+  };
+
   return (
     <>
       <div>
-        <div>12345</div>
+        <button
+          onClick={() => {
+            request();
+          }}>
+          12345
+        </button>
         <a href="https://vite.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
